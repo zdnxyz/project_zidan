@@ -11,4 +11,8 @@ class pengguna extends Model
 
     protected $fillable = ['id','nama'];
     public $timestamps = true;
+
+    public function Telepon (){
+        return $this->hasOne(Telepon::class);
+    }
 }

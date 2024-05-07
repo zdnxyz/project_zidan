@@ -2,6 +2,7 @@
 use App\Models\Post;
 use App\Models\Produks;
 use App\Models\Pengguna;
+use App\Models\Telepon;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -64,5 +65,10 @@ Route ::get('/data_pengguna', function () {
    
 return view('pengguna_post', compact('penggunas'));
 });
-   
+
+Route ::get('/data_telepon', function () {
+    $telepons = Telepon::all();
+
+return view('telepon_post', compact('telepons'));
+});
 
