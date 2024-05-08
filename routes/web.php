@@ -3,6 +3,8 @@ use App\Models\Post;
 use App\Models\Produks;
 use App\Models\Pengguna;
 use App\Models\Telepon;
+use App\Models\Product;
+use App\Models\Merk;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -72,3 +74,14 @@ Route ::get('/data_telepon', function () {
 return view('telepon_post', compact('telepons'));
 });
 
+Route ::get('/data_merk', function () {
+    $merks = Merk::all();
+
+return view('merk_post', compact('merks'));
+});
+
+Route ::get('/data_product', function () {
+    $products = Product::all();
+
+return view('product_post', compact('products'));
+});
